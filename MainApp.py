@@ -52,9 +52,6 @@ class MainApp(App):
     def build(self):
         return whatever_two()
 
-    def on_press_button(self, instance):
-        print("You clicked the button " + instance.text)
-
 
 class whatever_two(Widget):
 
