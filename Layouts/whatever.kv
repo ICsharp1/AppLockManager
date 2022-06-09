@@ -1,0 +1,16 @@
+#:kivy 1.0
+
+<whatever_two>
+    
+    GridLayout:
+        size: root.size
+        cols: 2
+        rows: 1
+        Label:
+            text: 'Hello world'
+            font_size: 50
+            color: 0, 1, 0, .8
+        Button:
+            text: 'Click me'
+            on_press: on_press_button()
+    
