@@ -2,10 +2,9 @@ from kivy.app import App
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.label import Label
 from kivy.uix.image import Image
-from kivy.uix.button import Button
+#from kivy.uix.button import Button
 from kivy.uix.textinput import TextInput
 from kivy.app import App
-from kivy.uix.button import Button
 from kivy.uix.boxlayout import BoxLayout
 from numpy import spacing
 from kivy.uix.button import Button
@@ -23,7 +22,7 @@ purple = [1, 0, 1, 1]
 RESOURCEPATH = 'C:\\Users\\israe\\OneDrive\\שולחן העבודה\\\AppLockManager\\Resources\\'
 LAYOUTS = 'C:\\Users\\israe\\OneDrive\\שולחן העבודה\\\AppLockManager\\Layouts\\'
 
-Builder.load_file(LAYOUTS + 'Button.kv')
+#Builder.load_file(LAYOUTS + 'Button.kv')
 Builder.load_file(LAYOUTS + 'whatever.kv')
 
 
@@ -52,6 +51,9 @@ class MainApp(App):
     def build(self):
         return whatever_two()
 
+    def on_press_button(self, instance):
+        print("You clicked the button " + instance.text)
+
 
 class whatever_two(Widget):
 
@@ -60,6 +62,5 @@ class whatever_two(Widget):
 
 
 if __name__ == "__main__":
-
     app = MainApp()
     app.run()
